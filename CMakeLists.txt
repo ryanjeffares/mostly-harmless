@@ -39,31 +39,33 @@ SET(CLAP_WRAPPER_CXX_STANDARD 20)
 set(CLAP_WRAPPER_DOWNLOAD_DEPENDENCIES TRUE CACHE BOOL "Dowload dependencies")
 FetchContent_Declare(
         clap-wrapper
-        GIT_REPOSITORY https://github.com/free-audio/clap-wrapper.git
-        GIT_TAG 5a98d30afe5fc805779cbcfce8b1f1bf99570bfa
-        GIT_SHALLOW ON
+        GIT_REPOSITORY  https://github.com/free-audio/clap-wrapper.git
+        GIT_TAG         v0.12.0
+        GIT_SHALLOW     ON
 )
 FetchContent_MakeAvailable(clap-wrapper)
 
-FetchContent_Declare(json
-        URL https://github.com/nlohmann/json/releases/download/v3.11.3/json.tar.xz
-        URL_HASH SHA256=d6c65aca6b1ed68e7a182f4757257b107ae403032760ed6ef121c9d55e81757d
-        GIT_SHALLOW ON
+FetchContent_Declare(
+        json
+        GIT_TAG         https://github.com/nlohmann/json.git
+        GIT_TAG         v3.11.3
+        GIT_SHALLOW     ON
 )
 FetchContent_MakeAvailable(json)
 
 FetchContent_Declare(
         fmt
-        GIT_REPOSITORY https://github.com/fmtlib/fmt
-        GIT_TAG 11.0.2
-        GIT_SHALLOW ON)
+        GIT_REPOSITORY  https://github.com/fmtlib/fmt
+        GIT_TAG         11.0.2
+        GIT_SHALLOW     ON
+)
 FetchContent_MakeAvailable(fmt)
 
 FetchContent_Declare(
         marvin
-        GIT_REPOSITORY https://github.com/MeijisIrlnd/marvin.git
-        GIT_TAG main
-        GIT_SHALLOW ON
+        GIT_REPOSITORY  https://github.com/MeijisIrlnd/marvin.git
+        GIT_TAG         main
+        GIT_SHALLOW     ON
 )
 FetchContent_MakeAvailable(marvin)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/include/mostly_harmless)
