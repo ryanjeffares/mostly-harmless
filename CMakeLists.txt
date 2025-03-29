@@ -47,7 +47,7 @@ FetchContent_MakeAvailable(clap-wrapper)
 
 FetchContent_Declare(
         json
-        GIT_TAG         https://github.com/nlohmann/json.git
+        GIT_REPOSITORY  https://github.com/nlohmann/json.git
         GIT_TAG         v3.11.3
         GIT_SHALLOW     ON
 )
@@ -63,8 +63,8 @@ FetchContent_MakeAvailable(fmt)
 
 FetchContent_Declare(
         marvin
-        GIT_REPOSITORY  https://github.com/MeijisIrlnd/marvin.git
-        GIT_TAG         main
+        GIT_REPOSITORY  https://github.com/ryanjeffares/marvin.git
+        GIT_TAG         ryan/changes
         GIT_SHALLOW     ON
 )
 FetchContent_MakeAvailable(marvin)
